@@ -470,7 +470,7 @@ addToDone("Exercise 28 is correct.")
 // Exercise 29
 // Write a function definition named square that takes in a number and returns the number times itself.
 function square(num) {
-  return num ** 2 
+  return num * num 
 }
 assert(square(3), 9, "Exercise 29");
 assert(square(2), 4, "Exercise 29");
@@ -495,8 +495,8 @@ addToDone("Exercise 30 is correct.")
 
 // Exercise 31
 // Write a function definition named cube that takes in a number and returns the number times itself, times itself.
-function cube(num) {
-  return num ** 3;
+function cube(x) {
+  return x * x * x;
 }
 
 assert(cube(3), 27, "Exercise 31");
@@ -509,8 +509,8 @@ addToDone("Exercise 31 is correct.")
 
 // Exercise 32
 // Write a function definition named squareRoot that takes in a number and returns the square root of the provided number
-function squareRoot(num) {
-  return Math.sqrt(num);
+function squareRoot(x) {
+  return Math.sqrt(x);
 }
 
 assert(squareRoot(4), 2.0, "Exercise 32");
@@ -565,6 +565,7 @@ addToDone("Exercise 35 is correct.")
 function quotient(x, y) {
   return (x/y) - ((x/y) %1)
 }
+//****QUESTION ON HOW THIS ONE WORKS****
 
 assert(quotient(27, 9), 3, "Exercise 36");
 assert(quotient(5, 2), 2, "Exercise 36");
@@ -599,8 +600,8 @@ addToDone("Exercise 38 is correct.")
 
 // Exercise 39
 // Write a function definition named timesTwoPlusThree that takes in a number, multiplies it by two, adds 3 and returns the result.
-function timesTwoPlusThree(num) {
-  return (num * 2) + 3;
+function timesTwoPlusThree(x) {
+  return (x * 2) + 3;
 }
 assert(timesTwoPlusThree(0), 3, "Exercise 39");
 assert(timesTwoPlusThree(1), 5, "Exercise 39");
@@ -625,6 +626,9 @@ addToDone("Exercise 40 is correct.")
 
 // Exercise 41
 // Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
+function areaOfCircle(x) {
+  return x * x * Math.PI;
+}
 
 assert(areaOfCircle(3), 28.274333882308138, "Exercise 41");
 assert(areaOfCircle(5), 78.53981633974483, "Exercise 41");
@@ -634,6 +638,9 @@ addToDone("Exercise 41 is correct.")
 
 // Exercise 42
 // Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
+function circumference(x) {
+  return x * 2 * Math.PI;
+}
 
 assert(circumference(3), 18.84955592153876, "Exercise 42");
 assert(circumference(5), 31.41592653589793, "Exercise 42");
@@ -657,6 +664,11 @@ function isOneOrTwoOrThree(x) {
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
 
+function isVowel(x) { 
+  var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        return (vowels.indexOf(x) != -1); 
+    }
+
 assert(isVowel("a"), true, "Exercise 43");
 assert(isVowel("U"), true, "Exercise 43");
 assert(isVowel("banana"), false, "Exercise 43");
@@ -668,6 +680,12 @@ addToDone("Exercise 43 is correct.")
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
 
+//var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+function hasVowels(x) {
+  return /[aeiou]/.test(x)
+}
+
 assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
 assert(hasVowels("QQQQ"), false, "Exercise 44");
@@ -677,6 +695,9 @@ addToDone("Exercise 44 is correct.")
 
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
+function countVowels(x) {
+  
+}
 
 assert(countVowels("banana"), 3, "Exercise 45");
 assert(countVowels("ubuntu"), 3, "Exercise 45");
